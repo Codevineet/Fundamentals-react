@@ -1,12 +1,13 @@
-function Interests() {
+function Interests(props) {
+  const data = props.data;
   return (
     <>
       <h3>Interests</h3>
-      <li>Drawing</li>
-      <li>Photography</li>
-      <li>Design</li>
-      <li>Programming</li>
-      <li>Computer Science</li>
+      <ul>
+        {data.map((element) => {
+          return <li>{element}</li>;
+        })}
+      </ul>
     </>
   );
 }

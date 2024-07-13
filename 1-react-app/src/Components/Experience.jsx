@@ -1,4 +1,4 @@
-function Experience() {
+function Experience(props) {
   return (
     <>
       <h3>Experience</h3>
