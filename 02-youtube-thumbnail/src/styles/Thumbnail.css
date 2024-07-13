@@ -1,0 +1,25 @@
+.container {
+  width: 25vw;
+  height: 14vh;
+  border-radius: 10px;
+  display: flex;
+  /* background-color: red; */
+  margin: 10px;
+  padding: 5px;
+}
+
+.imageContainer > img {
+  width: 12vw;
+  height: 15vh;
+  border-radius: 10px 10px;
+  padding: 5px;
+}
+
+.description {
+  width: 22vw;
+  padding: 5px;
+  line-height: 0.7;
+  gap: 1px;
+  text-transform: initial;
+  margin: 5px;
+}
