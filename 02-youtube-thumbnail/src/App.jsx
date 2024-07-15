@@ -1,5 +1,6 @@
 import Thumbnail from "./components/Thumbnail";
 import arr from "./data/thumbnails-data.js";
+import PlayBtn from "./components/PlayBtn.jsx";
 
 function App() {
   return (
@@ -17,6 +18,13 @@ function App() {
           />
         );
       })}
+      <PlayBtn message="playClicked" onClick={() => console.log("touch")}>
+        {/* this onClick is the custom event  */}
+        play
+      </PlayBtn>
+      <PlayBtn message="pauseClicked" onClick={() => alert("Its meeee")}>
+        pause
+      </PlayBtn>
     </>
   );
 }
