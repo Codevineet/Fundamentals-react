@@ -1,7 +1,11 @@
-function PlayBtn({ message, children, onClick }) {
+function PlayBtn({ children, onPlay, onPause }) {
+  let playing = false; //dont use this approach
   function handleClick() {
-    onClick();
+    if (playing) onPause();
+    else onPlay();
+    playing = !playing;
   }
+
   return (
     <>
       <button onClick={handleClick}>{children}</button>

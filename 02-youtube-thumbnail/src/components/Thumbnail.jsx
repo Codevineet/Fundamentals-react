@@ -1,7 +1,7 @@
 import "../styles/Thumbnail.css";
 
 function Thumbnail(props) {
-  const { name, about, subscriber, date, imgURL, verified } = props;
+  const { name, about, subscriber, date, imgURL, verified, children } = props;
 
   return (
     <>
@@ -17,6 +17,7 @@ function Thumbnail(props) {
           <p className="subscriber">
             {subscriber}k <span>. {date} months ago</span>
           </p>
+          {children}
         </div>
       </div>
     </>

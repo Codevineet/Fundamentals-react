@@ -5,26 +5,28 @@ import PlayBtn from "./components/PlayBtn.jsx";
 function App() {
   return (
     <>
-      {arr.map((element, index) => {
+      {arr.map((element) => {
         return (
-          <Thumbnail
-            key={element.id}
-            name={element.name}
-            about={element.about}
-            subscriber={element.subscriber}
-            date={element.date}
-            verified={element.verified}
-            imgURL={element.imgURL}
-          />
+          <div key={element.id}>
+            <Thumbnail
+              name={element.name}
+              about={element.about}
+              subscriber={element.subscriber}
+              date={element.date}
+              verified={element.verified}
+              imgURL={element.imgURL}
+            />
+
+            <PlayBtn 
+              message="playClicked"
+              onPlay={() => console.log("play", element.name)}
+              onPause={() => console.log("pause", element.name)}
+            >
+              {element.name}
+            </PlayBtn>
+          </div>
         );
       })}
-      <PlayBtn message="playClicked" onClick={() => console.log("touch")}>
-        {/* this onClick is the custom event  */}
-        play
-      </PlayBtn>
-      <PlayBtn message="pauseClicked" onClick={() => alert("Its meeee")}>
-        pause
-      </PlayBtn>
     </>
   );
 }
